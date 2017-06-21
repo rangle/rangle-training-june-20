@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'To Do';
+
+  thingsToDo = [
+    'Learn Angular',
+    'Learn Redux',
+    'Go to Millenium Park',
+  ]
+
+  thingsCompleted = []
+
+  ngOnInit() {
+
+  }
+  summary() {
+    return 'Summary: ' + this.thingsCompleted.length / this.thingsToDo.length
+  }
 }
