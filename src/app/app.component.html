@@ -2,7 +2,8 @@
 <p>
   {{summary()}}
 </p>
-<app-to-do-list [thingsToDo]="thingsToDo"></app-to-do-list>
+<app-to-do-list>
+</app-to-do-list>
 <app-generic-input (newItem)="onNewItem($event)"></app-generic-input>
 <p *ngIf="thingsCompleted.length === 0">
   Nothing Completed

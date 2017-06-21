@@ -1,25 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { ToDoService } from './to-do.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
+export class AppComponent  {
   title = 'To Do';
 
-  thingsToDo = [
-    'Learn Angular',
-    'Learn Redux',
-    'Go to Millenium Park',
-  ]
+  constructor(private todoService: ToDoService) { }
 
   thingsCompleted = []
 
-  ngOnInit() {
-
+  onNewItem(thingToDo: string) {
+    this.todoService.addItem(thingToDo);
   }
+
   summary() {
-    return 'Summary: ' + this.thingsCompleted.length / this.thingsToDo.length
+    return `Summary: ${this.thingsCompleted.length} Done / ${this.todoService.items.length} Total`;
   }
 }

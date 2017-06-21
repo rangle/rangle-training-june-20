@@ -1,3 +1,4 @@
+import { ToDoService } from './to-do.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,7 +17,9 @@ import { TitlecasePipe } from './titlecase.pipe';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    ToDoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
