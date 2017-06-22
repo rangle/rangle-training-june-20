@@ -11,23 +11,6 @@ export class GenericInputComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('genericinput on init');
-  }
-
-  ngDoCheck() {
-    console.log('genericinput do check');
-  }
-
-  ngAfterContentInit() {
-    console.log('genericinput after content init');
-  }
-
-  ngAfterViewInit() {
-    console.log('genericinput after view init');
-  }
-
-  ngOnDestroy() {
-    console.log('genericinput destroyed')
   }
 
   @Output() newItem: EventEmitter<string> = new EventEmitter()

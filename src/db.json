@@ -1,0 +1,7 @@
+{
+  "items": [
+    {"id": 0, "text": "Learn JavaScript"},
+    {"id": 1, "text": "Learn Node"},
+    {"id": 2, "text": "Learn Angular"}
+  ]
+}

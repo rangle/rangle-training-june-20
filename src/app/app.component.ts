@@ -13,8 +13,11 @@ export class AppComponent  {
 
   thingsCompleted = []
 
+  ngOnInit() {
+  }
+
   onNewItem(thingToDo: string) {
-    this.todoService.addItem(thingToDo);
+    this.todoService.addItem({ text: thingToDo });
   }
 
   summary() {
